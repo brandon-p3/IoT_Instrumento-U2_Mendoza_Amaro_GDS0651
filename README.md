@@ -2,6 +2,7 @@
 
 # Integrantes
 Mendoza Amaro Brandon Gustavo
+
 Morales Lezama Mirza Natzielly
 
 # Placas con figura
@@ -9,6 +10,9 @@ Morales Lezama Mirza Natzielly
 Mendoza Amaro
 
 Morales Lezama
+
+<img src="https://github.com/user-attachments/assets/4f6e701f-acfe-4358-8174-43bcdac57ebd">
+
 
 # Resultados de examen
 
