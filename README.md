@@ -11,7 +11,7 @@ Mendoza Amaro
 
 Morales Lezama
 
-<img src="https://github.com/user-attachments/assets/4f6e701f-acfe-4358-8174-43bcdac57ebd">
+<img src="https://github.com/user-attachments/assets/4f6e701f-acfe-4358-8174-43bcdac57ebd" width="200">
 
 
 # Resultados de examen
