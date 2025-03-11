@@ -1,10 +1,16 @@
 # IoT_Instrumento-U2_Mendoza_Amaro_Morales_Lezama_GDS0651
 
-# Ejercio Placas 
-
+# Integrantes
 Mendoza Amaro Brandon Gustavo
-
 Morales Lezama Mirza Natzielly
+
+# Placas con figura
+
+Mendoza Amaro
+
+Morales Lezama
+
+# Resultados de examen
 
 # Curso Cisco
 
