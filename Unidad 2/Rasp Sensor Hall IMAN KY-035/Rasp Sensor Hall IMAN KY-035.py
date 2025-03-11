@@ -1,4 +1,4 @@
-from machine import Pin
+from machine import ADC, Pin
 import time
 import network
 from umqtt.simple import MQTTClient
@@ -7,7 +7,7 @@ from umqtt.simple import MQTTClient
 SSID = "GUS_LAP 9476"
 PASSWORD = "@95X393b"
 MQTT_BROKER = "192.168.137.144"
-MQTT_TOPIC = "mnml/sensor/KY-004"
+MQTT_TOPIC = "bgma/sensor/KY-035"
 
 
 # Conectar a WiFi
@@ -27,15 +27,14 @@ client.connect()
 print("✅ Conectado a MQTT!")
 
 
-BOTON_PIN = 4  # GPIO donde conectaste el KY-004
-
-boton = Pin(BOTON_PIN, Pin.IN, Pin.PULL_UP)  # Configurar el pin como entrada con resistencia pull-up
+# Configurar el pin analógico (GPIO34 en ESP32)
+sensor_hall = ADC(Pin(34))
+sensor_hall.atten(ADC.ATTN_11DB)  # Ajusta la atenuación para leer hasta 3.3V
 
 while True:
-    if boton.value() == 0:  # El botón está presionado (LOW)
-        print("¡Botón presionado!")
-        client.publish(MQTT_TOPIC, str(boton.value()))
-    else:
-        print("Botón liberado")
+    valor = sensor_hall.read()  # Leer valor analógico (0 - 4095 en ESP32)
+    print("Valor del sensor KY-035:", valor)
+    if valor > 0:
+        client.publish(MQTT_TOPIC, str(valor))
     
-    time.sleep(1)  # Pequeño retraso para evitar lecturas erróneas
+    time.sleep(0.5)  # Pequeña pausa para no saturar la salida

@@ -7,7 +7,7 @@ from umqtt.simple import MQTTClient
 SSID = "GUS_LAP 9476"
 PASSWORD = "@95X393b"
 MQTT_BROKER = "192.168.137.144"
-MQTT_TOPIC = "mnml/sensor/KY-004"
+MQTT_TOPIC = "bgma/sensor/KY-036"
 
 
 # Conectar a WiFi
@@ -27,15 +27,22 @@ client.connect()
 print("✅ Conectado a MQTT!")
 
 
-BOTON_PIN = 4  # GPIO donde conectaste el KY-004
 
-boton = Pin(BOTON_PIN, Pin.IN, Pin.PULL_UP)  # Configurar el pin como entrada con resistencia pull-up
+# Configuración del pin digital (DO) del KY-036
+sensor_metal = Pin(14, Pin.IN)  # GPIO 14 o el pin digital que estés usando
+
+
 
 while True:
-    if boton.value() == 0:  # El botón está presionado (LOW)
-        print("¡Botón presionado!")
-        client.publish(MQTT_TOPIC, str(boton.value()))
-    else:
-        print("Botón liberado")
+    # Leer la salida digital del sensor (0 o 1)
+    detecta_metal = sensor_metal.value()
     
-    time.sleep(1)  # Pequeño retraso para evitar lecturas erróneas
+    if detecta_metal == 1:
+        print("¡Metal detectado!")
+        client.publish(MQTT_TOPIC, str(detecta_metal))
+    else:
+        print("No se detecta metal.")
+
+
+    # Esperar un poco antes de la siguiente lectu
+    time.sleep(0.5)

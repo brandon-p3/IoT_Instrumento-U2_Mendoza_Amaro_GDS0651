@@ -7,7 +7,7 @@ from umqtt.simple import MQTTClient
 SSID = "GUS_LAP 9476"
 PASSWORD = "@95X393b"
 MQTT_BROKER = "192.168.137.144"
-MQTT_TOPIC = "mnml/sensor/KY-004"
+MQTT_TOPIC = "bgma/sensor/MQ-09"
 
 
 # Conectar a WiFi
@@ -27,15 +27,20 @@ client.connect()
 print("✅ Conectado a MQTT!")
 
 
-BOTON_PIN = 4  # GPIO donde conectaste el KY-004
 
-boton = Pin(BOTON_PIN, Pin.IN, Pin.PULL_UP)  # Configurar el pin como entrada con resistencia pull-up
+# Configuración del pin digital (DOUT) del MQ-9
+pin_digital = Pin(13, Pin.IN)  # GPIO 13 o el pin digital que estés usando
 
 while True:
-    if boton.value() == 0:  # El botón está presionado (LOW)
-        print("¡Botón presionado!")
-        client.publish(MQTT_TOPIC, str(boton.value()))
-    else:
-        print("Botón liberado")
+    # Leer la salida digital (0 o 1)
+    detecta_gas = pin_digital.value()
     
-    time.sleep(1)  # Pequeño retraso para evitar lecturas erróneas
+    if detecta_gas == 1:
+        print("¡Gas detectado!")
+        client.publish(MQTT_TOPIC, str(detecta_gas))
+    else:
+        print("No se detecta gas.")
+    
+    # Pausa para evitar saturar el monitor serie
+    time.sleep(1)
+
