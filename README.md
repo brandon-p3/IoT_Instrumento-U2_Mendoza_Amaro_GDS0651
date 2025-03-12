@@ -8,8 +8,13 @@ Morales Lezama Mirza Natzielly
 # Placas con figura
 
 Mendoza Amaro
+<br>
+<img src="https://github.com/user-attachments/assets/e908ffea-da2e-4f30-93e3-c0ca8ac7f49b" width="200" alt="Imagen">
+<img src="https://github.com/user-attachments/assets/e0df2868-7bc2-42e6-81f2-d33086baa201" width="200" alt="Imagen">
+
 
 Morales Lezama
+<br>
 <img src="https://github.com/user-attachments/assets/4f6e701f-acfe-4358-8174-43bcdac57ebd" width="200" alt="Imagen">
 
 
@@ -22,6 +27,8 @@ Morales Lezama
 # Curso Cisco
 
 Mendoza Amaro Brandon Gustavo
+<img src="https://github.com/user-attachments/assets/e6f2ef46-840f-4cc5-a545-df645bf5c29f"/>
+
 
 Morales Lezama Mirza Natzielly
 
