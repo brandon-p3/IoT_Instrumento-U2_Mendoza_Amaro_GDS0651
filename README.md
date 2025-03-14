@@ -24,6 +24,13 @@ Morales Lezama
 
 # Resultados de examen
 
+Brandon Mendoza
+
+Mirza Morales
+
+<img src="https://github.com/user-attachments/assets/bd880ff6-599b-47fe-ba7f-1ea6dbe22bb7" width="400"/>
+
+
 # Curso Cisco
 
 Mendoza Amaro Brandon Gustavo
