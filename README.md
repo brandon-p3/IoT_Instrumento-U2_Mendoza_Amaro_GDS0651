@@ -25,6 +25,7 @@ Morales Lezama
 # Resultados de examen
 
 Brandon Mendoza
+<img src="https://github.com/user-attachments/assets/8f860e09-a29f-43c4-be79-60f72f29e98c"/>
 
 Mirza Morales
 
@@ -35,6 +36,7 @@ Mirza Morales
 
 Mendoza Amaro Brandon Gustavo
 <img src="https://github.com/user-attachments/assets/e6f2ef46-840f-4cc5-a545-df645bf5c29f"/>
+
 
 
 Morales Lezama Mirza Natzielly
